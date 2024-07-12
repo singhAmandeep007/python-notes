@@ -17,7 +17,7 @@
 ## How to run tests ?
 
 1. cd into weather directory
-2. Run `poetry run pytest -vv -s`
+2. Run `poetry run pytest -vv -s` or `poetry run test`
 
 ## How to run formatter ?
 

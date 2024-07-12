@@ -1,7 +1,13 @@
 import unittest
 import pytest
+
 from unittest.mock import patch
 from weather.get_weather import get_current_weather_info_by_lat_lng
+
+import logging
+
+# By using the __name__ attribute as the name of the logger, it allows the logger to be uniquely identified based on the module it belongs to.
+logger = logging.getLogger(__name__)
 
 
 @pytest.fixture

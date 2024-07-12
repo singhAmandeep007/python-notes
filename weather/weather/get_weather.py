@@ -1,18 +1,6 @@
 import argparse
 
-import logging
-
 from weather.weather_api import get_weather
-
-
-logger = logging.getLogger(__name__)
-
-logging.basicConfig(
-    filename="get_weather.log",
-    format="%(asctime)s %(levelname)s: %(message)s",
-    filemode="w",
-    level=logging.DEBUG,
-)
 
 
 def get_current_weather_info_by_lat_lng(lat: float = None, lng: float = None):
