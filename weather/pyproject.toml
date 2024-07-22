@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "weather"
 version = "0.1.0"
-description = ""
+description = "weather api"
 authors = ["singhAmandeep007 <amandeeps0803@gmail.com>"]
 readme = "README.md"
 
