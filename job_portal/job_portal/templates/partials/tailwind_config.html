@@ -1,0 +1,19 @@
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: "#da373d",
+        },
+      },
+    },
+  };
+</script>
+<style type="text/tailwindcss">
+  @layer utilities {
+    .btn-primary {
+      @apply text-sm inline-block px-4 py-2 border border-blue-500 text-blue-500 font-bold rounded hover:bg-blue-700 hover:text-white;
+    }
+  }
+</style>
