@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "reminders"
+version = "0.1.0"
+description = "reminder/note taking app"
+authors = ["singhAmandeep007 <amandeeps0803@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flask = "^3.0.3"
+flask-login = "^0.6.3"
+flask-sqlalchemy = "^3.1.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
