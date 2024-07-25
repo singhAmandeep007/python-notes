@@ -27,9 +27,12 @@ def create_app():
 
     from .models import User, Reminder
 
-    create_database(app)
+    with app.app_context():
+        # Create our database if it doesn't exist.
+        db.create_all()
 
     login_manager = LoginManager()
+    # The name of the view to redirect to when the user needs to log in. (This can be an absolute URL as well, if your authentication machinery is external to your application.). Here it is the function name `login` in auth blueprint.
     login_manager.login_view = "auth.login"
     login_manager.init_app(app)
 
@@ -38,7 +41,7 @@ def create_app():
     # current_user exposed by flask-login as A proxy for the current user.
     @login_manager.user_loader
     def load_user(id):
-        return User.query.get(int(id))
+        return db.session.get(User, int(id))
 
     return app
 

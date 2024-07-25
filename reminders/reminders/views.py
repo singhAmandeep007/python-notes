@@ -35,7 +35,7 @@ def delete_reminder():
     # using json.loads we can convert the JSON object to a Python dictionary
     reminder = json.loads(request.data)
     reminderId = reminder["reminderId"]
-    reminder = Reminder.query.get(reminderId)
+    reminder = db.session.get(Reminder, reminderId)
     if reminder:
         # check if the reminder belongs to the current user before deleting it
         if reminder.user_id == current_user.id:
